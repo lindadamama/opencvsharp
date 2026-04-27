@@ -144,7 +144,7 @@ public class BarcodeDetectorTest : TestBase
         // Must not throw or crash — result (found or not) is secondary.
         bd.DetectAndDecode(img, out var points, out var results, out var types);
 
-        Assert.Equal(points.Length, results.Length * 4);
+        Assert.Equal(results.Length * 4, points.Length);
         Assert.Equal(results.Length, types.Length);
     }
 
